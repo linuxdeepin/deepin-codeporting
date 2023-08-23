@@ -1,0 +1,6 @@
+Source: deepin-codeporting
+Package: deepin-codeporting
+Version: 1.0.0
+Architecture: all
+Maintainer: Deepin Packages Builder <packages@linuxdeepin.com>
+Description: A tool that supports multi-architecture code migration
