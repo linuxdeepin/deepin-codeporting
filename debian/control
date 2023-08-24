@@ -1,0 +1,14 @@
+Source: deepin-codeporting
+Section: utils
+Priority: optional
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Build-Depends: 
+Standards-Version: 4.1.3
+Homepage: <insert the upstream URL, if relevant>
+
+Package: deepin-codeporting
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: 
+  A tool that supports multi-architecture code migration
+
