@@ -4,9 +4,23 @@ A tool that supports multi-architecture code migration
 
 ## Dependencies
 
+None
+
 ## Installation
 
+use the deb installation package
+
 ## Usage
+
+Execute `deepin-codeporting -S SRC -B BUILD --dcpu DCPU [--scpu SCPU]`
+
+-S: Source code path
+
+-B: Compiled Code Path
+
+--dcpu: Destination CPU architecture
+
+--scpu: Source CPU architecture
 
 ## Getting help
 
