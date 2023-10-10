@@ -5,7 +5,7 @@
 
 override_dh_auto_install:
 	dh_auto_install
-	export PIP_BUILD_DIR=/tmp
+	export XDG_CACHE_HOME=/tmp
 	pip3 install --user pyinstaller -i https://it.uniontech.com/nexus/repository/pypi-public/simple
 	cd porting-script && ~/.local/bin/pyinstaller -F --add-data "config:config" --distpath ../debian/deepin-codeporting/usr/bin/ deepin-codeporting.py
 
