@@ -5,7 +5,6 @@
 
 override_dh_auto_install:
 	dh_auto_install
-	export XDG_CACHE_HOME=/tmp
-	pip3 install --user assets/pyinstaller-5.13.2-py3-none-manylinux2014_x86_64.whl
-	cd porting-script && ~/.local/bin/pyinstaller -F --add-data "config:config" --distpath ../debian/deepin-codeporting/usr/bin/ deepin-codeporting.py
+	mkdir -p debian/deepin-codeporting/usr/bin/
+	cp assets/deepin-codeporting debian/deepin-codeporting/usr/bin/
 
