@@ -5,6 +5,7 @@
 
 override_dh_auto_install:
 	dh_auto_install
-	mkdir -p debian/deepin-codeporting/usr/bin/
-	cp assets/deepin-codeporting debian/deepin-codeporting/usr/bin/
+	pip3 download pyinstaller -i https://it.uniontech.com/nexus/repository/pypi-public/simple
+	pip3 install --user ./*.whl
+	cd porting-script && ~/.local/bin/pyinstaller -F --add-data "config:config" --distpath ../debian/deepin-codeporting/usr/bin/ deepin-codeporting.py
 
