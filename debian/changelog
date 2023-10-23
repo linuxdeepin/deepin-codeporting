@@ -2,4 +2,4 @@ deepin-codeporting (1.0.0) unstable; urgency=medium
 
   * Initial release. (Closes: #XXXXXX)
 
- -- MAINTAINER <mozart@mozart-PC>  Thu, 24 Aug 2023 15:19:40 +0800
+ -- luzhen <luzhen@uniontech.com>  Thu, 24 Aug 2023 15:19:40 +0800
