@@ -2,7 +2,7 @@ Source: deepin-codeporting
 Section: utils
 Priority: optional
 Maintainer: Deepin Packages Builder <packages@deepin.com>
-Build-Depends: debhelper(>=9), python3-pip, python3-dev
+Build-Depends: debhelper(>=9), python3-pip, python3-dev, python3-setuptools, python3-wheel
 Standards-Version: 4.1.3
 Homepage: <insert the upstream URL, if relevant>
 
