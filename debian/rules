@@ -5,6 +5,8 @@
 
 override_dh_auto_install:
 	dh_auto_install
-	pip3 install pyinstaller --user -i https://it.uniontech.com/nexus/repository/pypi-public/simple --target /tmp/code-porting
-	cd porting-script && python3 /tmp/code-porting/PyInstaller -F --add-data "config:config" --distpath ../debian/deepin-codeporting/usr/bin/ deepin-codeporting.py
+	python3 -m venv myenv
+	. myenv/bin/activate
+	pip3 install pyinstaller -i https://it.uniontech.com/nexus/repository/pypi-public/simple
+	cd porting-script && ../myenv/bin/pyinstaller -F --add-data "config:config" --distpath ../debian/deepin-codeporting/usr/bin/ deepin-codeporting.py
 
