@@ -6,7 +6,7 @@
 override_dh_auto_install:
 	dh_auto_install && \
 	export HOME=/tmp/porting && \
-	pip3 install pyinstaller --use-pep517 -i https://it.uniontech.com/nexus/repository/pypi-public/simple && \
+	pip install pyinstaller --user --use-pep517 -i https://it.uniontech.com/nexus/repository/pypi-public/simple && \
 	cd porting-script && \
 	pyinstaller -F --add-data "config:config" --distpath ../debian/deepin-codeporting/usr/bin/ deepin-codeporting.py
 
