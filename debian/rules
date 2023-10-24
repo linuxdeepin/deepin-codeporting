@@ -4,8 +4,9 @@
 	dh $@ --parallel
 
 override_dh_auto_install:
-	dh_auto_install
-	export HOME=/tmp
-	pip3 install pyinstaller -i https://it.uniontech.com/nexus/repository/pypi-public/simple
-	cd porting-script && pyinstaller -F --add-data "config:config" --distpath ../debian/deepin-codeporting/usr/bin/ deepin-codeporting.py
+	dh_auto_install && \
+	export HOME=/tmp/porting && \
+	pip3 install pyinstaller -i https://it.uniontech.com/nexus/repository/pypi-public/simple && \
+	cd porting-script && \
+	pyinstaller -F --add-data "config:config" --distpath ../debian/deepin-codeporting/usr/bin/ deepin-codeporting.py
 
